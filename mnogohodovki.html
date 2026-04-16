@@ -546,7 +546,7 @@ footer {
       <p class="hero-note">Запись на 3 месяца · Чат с автором · Конспект материалов</p>
     </div>
     <div class="hero-right">
-      <img src="hero-chess.png" style="width:100%;max-width:480px;display:block;filter:drop-shadow(0 20px 60px rgba(115,43,193,0.25))">
+      <img src="mnogohodovki-hero.png" style="width:100%;max-width:520px;border-radius:20px;display:block;filter:drop-shadow(0 20px 60px rgba(115,43,193,0.2))">
       <div class="hero-chips">
         <span class="chip c-pink">2× Чемпион России</span>
         <span class="chip c-cyan">50 бизнес-игр</span>
@@ -664,57 +664,25 @@ footer {
 </section>
 
 <!-- AUTHOR -->
-<section id="author" style="background:var(--light);padding:80px 64px;">
+<section id="author" style="background:var(--light);">
   <div class="s-inner">
-    <div class="s-label">Автор интенсива</div>
-
-    <!-- Большое имя фоном -->
-    <div style="position:relative;">
-      <div style="font-family:'Unbounded',sans-serif;font-size:clamp(52px,7vw,96px);font-weight:900;text-transform:uppercase;color:var(--black);line-height:0.95;margin-bottom:40px;">
-        ОЛЬГА<br>ГРИЩЕНКО
+    <div class="author-grid">
+      <div class="author-photo-frame">
+        <div class="author-photo-bg"></div>
+        <img src="olga-photo.png" style="position:relative;z-index:2;width:100%;max-height:380px;object-fit:cover;object-position:top;border-radius:20px;filter:drop-shadow(0 16px 40px rgba(0,0,0,0.12));">
       </div>
-
-      <!-- Сетка: достижения слева, фото справа -->
-      <div style="display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:end;">
-
-        <!-- Достижения 2x3 -->
-        <div>
-          <div style="font-size:16px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:1px;margin-bottom:28px;">Автор мастер-класса</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;"><strong>Основатель</strong> фабрики бизнес-игр F5GAME.RU</p>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;"><strong>Эксперт</strong> по переговорам, практик</p>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;"><strong>Двукратная чемпионка</strong> России по управленческой борьбе</p>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;">Автор книги <strong>«Эффект красной розы»</strong></p>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;"><strong>Автор и разработчик</strong> 50 бизнес-игр</p>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:20px;background:#fff;border-radius:14px;border:1.5px solid rgba(0,0,0,0.07);">
-              <span style="color:#F7E432;font-size:22px;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(247,228,50,0.5))">★</span>
-              <p style="font-size:15px;line-height:1.2;color:#111;font-weight:600;"><strong>Автор проектов</strong> «Экспертные игры», «Авторский метод»</p>
-            </div>
-          </div>
-          <a href="#pricing" class="btn-primary" style="display:inline-block;margin-top:32px;">КУПИТЬ БИЛЕТ</a>
+      <div class="author-right">
+        <div class="s-label">Автор интенсива</div>
+        <div class="author-name">ОЛЬГА<br>ГРИЩЕНКО</div>
+        <div class="author-role">Эксперт по переговорам · F5GAME.RU</div>
+        <div class="ach-grid">
+          <div class="ach-item"><span class="ach-star">★</span><p><strong>Основатель</strong> фабрики бизнес-игр F5GAME.RU</p></div>
+          <div class="ach-item"><span class="ach-star">★</span><p><strong>2× Чемпионка России</strong> по управленческой борьбе</p></div>
+          <div class="ach-item"><span class="ach-star">★</span><p>Автор книги <strong>«Эффект красной розы»</strong></p></div>
+          <div class="ach-item"><span class="ach-star">★</span><p>Разработчик <strong>50 бизнес-игр</strong></p></div>
+          <div class="ach-item"><span class="ach-star">★</span><p><strong>Эксперт</strong> по переговорам, практик</p></div>
+          <div class="ach-item"><span class="ach-star">★</span><p>Автор проектов <strong>«Экспертные игры»</strong></p></div>
         </div>
-
-        <!-- Фото Ольги -->
-        <div style="position:relative;">
-          <div style="position:absolute;bottom:0;left:10%;right:-10%;top:10%;background:linear-gradient(135deg,rgba(115,43,193,0.1),rgba(237,30,121,0.07));border-radius:24px;"></div>
-          <img src="olga-photo.png" style="position:relative;z-index:2;width:100%;display:block;filter:drop-shadow(0 20px 50px rgba(0,0,0,0.12));">
-        </div>
-
       </div>
     </div>
   </div>
