@@ -511,7 +511,7 @@ footer {
   .author-name { font-size: 30px; }
   .ach-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
-  .rev-grid { grid-template-columns: 1fr; }
+  #reviews .s-inner > div { grid-template-columns: 1fr !important; }
   .foot-inner { flex-direction: column; gap: 16px; text-align: center; }
 }
 </style>
@@ -746,31 +746,80 @@ footer {
     <div class="s-label">Что говорят участники</div>
     <h2 class="s-title" style="margin-bottom:48px;">Отзывы <span class="u-pink">учеников</span></h2>
 
-    <div class="rev-grid">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
       <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">«После интенсива я <strong>получила оффер мечты</strong> — использовала многоходовку из 4 шагов. Раньше казалось, что это невозможно.»</p>
-        <div class="reviewer">
-          <div class="rev-avatar">АМ</div>
-          <div><div class="rev-name">Анна М.</div><div class="rev-role">HR-директор</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">АХ</div>
+          <div>
+            <div class="rev-name">Анна Хардер</div>
+            <div class="rev-role">Архетипы для Продвинутых ⭐</div>
+          </div>
         </div>
+        <p class="rev-text">«Мое личное мнение, что <strong>Ольга королева мастерклассов</strong> (а еще продаж, переговоров, красоты и впечатляющих выступлений). Я не знаю никого, кто бы так ёмко, просто и интересно давал непростую, но мега-полезную информацию. Ольга, вы это делаете гениально!»</p>
+        <div style="font-size:18px;">🔥🤝💯</div>
       </div>
+
       <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">«Закрыл сделку, которую откладывал 6 месяцев. <strong>Ключ — в архитектуре разговора.</strong> Теперь готовлюсь к каждым переговорам по-другому.»</p>
-        <div class="reviewer">
-          <div class="rev-avatar">СК</div>
-          <div><div class="rev-name">Сергей К.</div><div class="rev-role">Предприниматель</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">АП</div>
+          <div>
+            <div class="rev-name">Анна Першикова</div>
+            <div class="rev-role">Участник интенсива</div>
+          </div>
         </div>
+        <p class="rev-text">«<strong>Мега ценно, Мега много, Мега полезно!</strong> Забираю все формулы. Даже если 1/10 знаний этого МК передать тем, кто нас окружает — точно станет легче взаимодействовать, проводить переговоры и давать полезную обратную связь. Мне очень зашел сценарий совместной победы!»</p>
+        <div style="font-size:18px;">❤️🔥🏆</div>
       </div>
+
       <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">«Переговоры о повышении — <strong>+40% к зарплате</strong> через 3 недели после интенсива. Ольга дала конкретный инструмент, а не общие слова.»</p>
-        <div class="reviewer">
-          <div class="rev-avatar">МВ</div>
-          <div><div class="rev-name">Мария В.</div><div class="rev-role">Топ-менеджер</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">ОК</div>
+          <div>
+            <div class="rev-name">Ольга Кубасова</div>
+            <div class="rev-role">Участник интенсива ⭐</div>
+          </div>
         </div>
+        <p class="rev-text">«Лучше один раз увидеть, чем сто раз услышать — именно так состоялось моё первое знакомство с Ольгой Грищенко. <strong>Благодарю за все инсайты и открытия.</strong> Некоторые вещи чувствовала на интуитивном уровне, другие стали для меня открытием. Благодарю!»</p>
+        <div style="font-size:18px;">🔥</div>
       </div>
+
+      <div class="rev-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">ЕК</div>
+          <div>
+            <div class="rev-name">Елена Кузьмина</div>
+            <div class="rev-role">Участник интенсива</div>
+          </div>
+        </div>
+        <p class="rev-text">«Мастер-класс — <strong>бездна вдохновения, инструментов, столкновений с неожиданностью.</strong> Очень наглядно и полезно проанализировали кинопримеры. Поняла, чего на самом деле ждут мои заказчики и как принести им максимум пользы. Спасибо огромное!»</p>
+        <div style="font-size:18px;">🔥❤️👌</div>
+      </div>
+
+      <div class="rev-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">МА</div>
+          <div>
+            <div class="rev-name">Марина Арьяева</div>
+            <div class="rev-role">Участник интенсива 〜</div>
+          </div>
+        </div>
+        <p class="rev-text">«Ох, Ольга! Вытягиваете меня за уши из раковины. А вы учите, что надо, если хочешь быть магнетической личностью! <strong>Сверхуверенность и революционер с юмором — это точки роста!</strong> Больше практики и искать кейсы всюду!»</p>
+        <div style="font-size:18px;">🔥🎉</div>
+      </div>
+
+      <div class="rev-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="rev-avatar">ЕБ</div>
+          <div>
+            <div class="rev-name">Елена Булгакова</div>
+            <div class="rev-role">Участник интенсива ⭐</div>
+          </div>
+        </div>
+        <p class="rev-text">«У меня такое впечатление, что <strong>у меня оттаивает что-то внутри и начинает расцветать.</strong> Ваши МК просто животворящие. Благодаря вам, я решилась и провела Новогодний корпоратив на 30 человек — всем так понравилось! Спасибо вам за пробуждение творчества!»</p>
+        <div style="font-size:18px;">🔥❤️😍</div>
+      </div>
+
     </div>
   </div>
 </section>
