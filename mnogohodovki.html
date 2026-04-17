@@ -329,7 +329,7 @@ section { padding: 100px 64px; position: relative; overflow: hidden; }
   background: radial-gradient(circle, rgba(115,43,193,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
-.author-grid { display: grid; grid-template-columns: 65% 35%; gap: 24px; align-items: stretch; }
+.author-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
 .author-photo-frame {
   position: relative; max-width: 400px;
 }
@@ -668,8 +668,8 @@ footer {
   <div class="s-inner">
     <div class="author-grid">
       <div class="author-photo-frame">
-        <div style="background:linear-gradient(160deg,#ede8f7,#f7eef5);border-radius:28px;padding:0;overflow:hidden;box-shadow:0 8px 40px rgba(115,43,193,0.1);height:100%;display:flex;align-items:flex-end;">
-          <img src="olga-photo.svg" style="width:100%;display:block;object-fit:cover;object-position:center bottom;">
+        <div style="background:linear-gradient(160deg,#ede8f7,#f7eef5);border-radius:28px;padding:0;overflow:hidden;box-shadow:0 8px 40px rgba(115,43,193,0.1);height:100%;min-height:500px;display:flex;align-items:flex-end;">
+          <img src="olga-photo.svg" style="width:100%;height:100%;display:block;object-fit:cover;object-position:top center;">
         </div>
       </div>
       <div class="author-right">
