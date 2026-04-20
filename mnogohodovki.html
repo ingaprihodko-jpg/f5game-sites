@@ -705,7 +705,7 @@ footer {
         <div class="old-price">100 000 ₽</div>
         <div class="new-price">25 000 ₽</div>
         <div class="price-note">Доступ сразу после оплаты</div>
-        <script id="fd6cd893cd90796ecb959ac1142538b609562813" src="https://f5game.site/pl/lite/widget/script?id=1593292"></script>
+        <button class="btn-buy" onclick="openPopup('standard')">КУПИТЬ БИЛЕТ</button>
       </div>
 
       <div class="price-card featured">
@@ -722,7 +722,7 @@ footer {
         <div class="old-price">250 000 ₽</div>
         <div class="new-price">75 000 ₽</div>
         <div class="price-note">Ограничено — только 5 мест</div>
-        <script id="e92d74e86a6c0f75ae784e42b85e824a6cc57084" src="https://f5game.site/pl/lite/widget/script?id=1593293"></script>
+        <button class="btn-buy" onclick="openPopup('vip')">ИДУ УЧИТЬСЯ!</button>
       </div>
 
       <div class="pricing-bonus">
@@ -832,5 +832,46 @@ footer {
   </div>
 </footer>
 
+
+<!-- POPUP -->
+<div id="popup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:24px;padding:40px;max-width:520px;width:90%;position:relative;box-shadow:0 24px 80px rgba(0,0,0,0.2);">
+    <button onclick="closePopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">✕</button>
+    <div id="popup-content"></div>
+  </div>
+</div>
+
+<script>
+function openPopup(type) {
+  var overlay = document.getElementById('popup-overlay');
+  var content = document.getElementById('popup-content');
+  overlay.style.display = 'flex';
+
+  if (type === 'standard') {
+    content.innerHTML = '<script id="fd6cd893cd90796ecb959ac1142538b609562813" src="https://f5game.site/pl/lite/widget/script?id=1593292"><\/script>';
+  } else {
+    content.innerHTML = '<script id="e92d74e86a6c0f75ae784e42b85e824a6cc57084" src="https://f5game.site/pl/lite/widget/script?id=1593293"><\/script>';
+  }
+
+  // Переисполнить скрипт
+  var scripts = content.querySelectorAll('script');
+  scripts.forEach(function(s) {
+    var newScript = document.createElement('script');
+    newScript.id = s.id;
+    newScript.src = s.src;
+    s.parentNode.replaceChild(newScript, s);
+  });
+}
+
+function closePopup() {
+  document.getElementById('popup-overlay').style.display = 'none';
+  document.getElementById('popup-content').innerHTML = '';
+}
+
+// Закрыть по клику на фон
+document.getElementById('popup-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
+</script>
 </body>
 </html>
