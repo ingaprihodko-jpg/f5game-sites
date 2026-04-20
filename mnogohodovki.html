@@ -410,14 +410,14 @@ section { padding: 100px 64px; position: relative; overflow: hidden; }
   text-transform: uppercase; color: var(--black);
   margin-bottom: 24px; line-height: 1.2;
 }
-.price-feats { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.price-feats { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; min-height: 200px; }
 .price-feats li {
   font-size: 15px; color: var(--black); line-height: 1.2;
   padding-left: 24px; position: relative; font-weight: 600;
 }
 .price-feats li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 800; }
 .price-feats li.bonus::before { content: '★'; color: #d4a000; }
-.old-price { font-size: 17px; color: #aaa; text-decoration: line-through; margin-bottom: 4px; }
+.old-price { font-size: 17px; color: #aaa; text-decoration: line-through; margin-bottom: 4px; min-height: 26px; }
 .new-price {
   font-family: 'Unbounded', sans-serif;
   font-size: 42px; font-weight: 900; color: var(--black); line-height: 1;
