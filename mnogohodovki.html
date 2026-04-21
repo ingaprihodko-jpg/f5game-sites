@@ -736,6 +736,60 @@ footer {
   </div>
 </section>
 
+
+<!-- TIMER -->
+<div style="background:linear-gradient(135deg,rgba(237,30,121,0.06),rgba(115,43,193,0.06));border-top:1px solid rgba(237,30,121,0.15);border-bottom:1px solid rgba(237,30,121,0.15);padding:40px 64px;text-align:center;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#732BC1;margin-bottom:12px;">Специальная цена действует до</div>
+    <div style="font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:#111;margin-bottom:24px;">23 апреля · 12:30 МСК</div>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <div style="background:#fff;border-radius:16px;padding:20px 28px;min-width:100px;box-shadow:0 4px 20px rgba(115,43,193,0.1);border:1.5px solid rgba(115,43,193,0.12);">
+        <div id="timer-days" style="font-family:'Unbounded',sans-serif;font-size:40px;font-weight:900;color:#111;line-height:1;">00</div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">дней</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px 28px;min-width:100px;box-shadow:0 4px 20px rgba(115,43,193,0.1);border:1.5px solid rgba(115,43,193,0.12);">
+        <div id="timer-hours" style="font-family:'Unbounded',sans-serif;font-size:40px;font-weight:900;color:#ED1E79;line-height:1;">00</div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">часов</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px 28px;min-width:100px;box-shadow:0 4px 20px rgba(115,43,193,0.1);border:1.5px solid rgba(115,43,193,0.12);">
+        <div id="timer-minutes" style="font-family:'Unbounded',sans-serif;font-size:40px;font-weight:900;color:#ED1E79;line-height:1;">00</div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">минут</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px 28px;min-width:100px;box-shadow:0 4px 20px rgba(115,43,193,0.1);border:1.5px solid rgba(115,43,193,0.12);">
+        <div id="timer-seconds" style="font-family:'Unbounded',sans-serif;font-size:40px;font-weight:900;color:#111;line-height:1;">00</div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:6px;">секунд</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var deadline = new Date('2026-04-23T12:30:00+03:00');
+  function update() {
+    var now = new Date();
+    var diff = deadline - now;
+    if (diff <= 0) {
+      document.getElementById('timer-days').textContent = '00';
+      document.getElementById('timer-hours').textContent = '00';
+      document.getElementById('timer-minutes').textContent = '00';
+      document.getElementById('timer-seconds').textContent = '00';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('timer-days').textContent = String(d).padStart(2,'0');
+    document.getElementById('timer-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('timer-minutes').textContent = String(m).padStart(2,'0');
+    document.getElementById('timer-seconds').textContent = String(s).padStart(2,'0');
+  }
+  update();
+  setInterval(update, 1000);
+})();
+</script>
+
 <!-- REVIEWS -->
 <section id="reviews">
   <div class="s-inner">
